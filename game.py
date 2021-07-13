@@ -53,7 +53,19 @@ print("COMPUTER CHOSE:", c)
 
 if (c == x):
     print("tie")
-else:
-    print("Who won")
-    
+elif(c == "rock") and (x == "scissors"):
+    print("Computer won")
+elif(c == "scissors") and (x == "rock"):
+    print("You won")
+elif(c == "paper") and (x == "rock"):
+    print("Computer won")
+elif(c == "rock") and (x == "paper"):
+    print("You won")
+elif(c == "scissors") and (x == "paper"):
+    print("Computer won")
+elif(c == "paper") and (x == "scissors"):
+    print("You won")
+
+
+
 

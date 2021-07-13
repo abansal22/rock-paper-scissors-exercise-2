@@ -49,5 +49,11 @@ c = random.choice(valid_options)
 
 print("COMPUTER CHOSE:", c)
 
-
 # DETERMINE THE WINNER
+
+if (c == x):
+    print("tie")
+else:
+    print("Who won")
+    
+

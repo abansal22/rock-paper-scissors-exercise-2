@@ -123,7 +123,9 @@ The file's contents should include:
 python-dotenv # see: https://github.com/theskumar/python-dotenv
 
 Next, in the command-line enter
-```pip install -r requirements.txt
+
+```
+pip install -r requirements.txt
 ```
 This will install the dotenv environment to your python project.
 

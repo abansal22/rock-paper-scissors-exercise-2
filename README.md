@@ -13,7 +13,7 @@ Practice incorporating version control into your local development process.
 
 ## Instruction
 
-Iteratively develop a command-line Python application which will allow a human user to play a game of Rock-Paper-Scissors against a computer (NPC) opponent. The game's functionality should adhere to the "Requirements" below.
+Interactively develop a command-line Python application which will allow a human user to play a game of Rock-Paper-Scissors against a computer (NPC) opponent. The game's functionality should adhere to the "Requirements" below.
 
 Before attempting to implement the basic requirements, take some time to configure your project repository according to the "Setup" instructions below. After doing so, you'll have a remote repo on GitHub and a local copy on your computer within which to develop.
 
@@ -27,11 +27,13 @@ After creating the remote repo, use GitHub Desktop software or the command-line 
 
 After cloning the repo, navigate there from the command-line:
 
-```cd ~/Desktop/rock-paper-scissors-exercise1
+```
+cd ~/Desktop/rock-paper-scissors-exercise1
 ```
 Use your text editor or the command-line to create a file in that repo called "game.py", and then place the following contents inside:
 
-```# game.py
+```
+# game.py
 
 print("Rock, Paper, Scissors, Shoot!")
 ```
@@ -43,12 +45,14 @@ FYI: Only because we're going to be working with environment variables and requi
 
 Create and activate a new project-specific Anaconda virtual environment:
 
-```conda create -n my-game-env python=3.8 # (first time only)
+```
+conda create -n my-game-env python=3.8 # (first time only)
 conda activate my-game-env
 ```
 From within the virtual environment, demonstrate your ability to run the Python script from the command-line:
 
-```python game.py
+```
+python game.py
 ```
 
 If you see the "Rock, Paper, Scissors, Shoot!" message, you're ready to move on to project development. This would be a great time to make any desired modifications to your project's "README.md" file (like adding instructions for how to setup and run the app like you've just done), and then make your first commit, with a message like "Setup the repo".
@@ -94,7 +98,8 @@ After determining the winner, the application should display the results to the 
 + A friendly farewell message
 
 Example desired output after one round of game-play:
-```-------------------
+```
+-------------------
 Welcome 'Player One' to my Rock-Paper-Scissors game...
 -------------------
 Please choose either 'rock', 'paper', or 'scissors': rock
@@ -123,46 +128,4 @@ Next, in the command-line enter
 This will install the dotenv environment to your python project.
 
 Lastly, create a new file called ".env". Within the file add USER_NAME="PLAYER_NAME"
-
-
-```sh
-cd my-first-python-app
-```
-
-Use Anaconda to create and activate a new virtual environment, perhaps called "my-first-env":
-
-```sh
-conda create -n my-first-env python=3.8
-conda activate my-first-env
-```
-
-After activating the virtual environment, install package dependencies (see the ["requirements.txt"](/requirements.txt) file):
-
-```sh
-pip install -r requirements.txt
-```
-
-> NOTE: if this command throws an error like "Could not open requirements file: [Errno 2] No such file or directory", make sure you are running it from the repository's root directory, where the requirements.txt file exists (see the initial `cd` step above).
-
-## Setup
-
-In the root directory of your local repository, create a new file called ".env", and update the contents of the ".env" file to specify your desired username (then make sure to SAVE the ".env" file aftwards):
-
-    USER_NAME="Jon Snow"
-    SECRET_PASSWORD="super duper secret"
-
-> NOTE: the ".env" file is usually the place for passing configuration options and secret credentials, so as a best practice we don't upload this file to version control (which is accomplished via a corresponding entry in the [".gitignore"](/.gitignore) file). This means we need to instruct each person who uses our code needs to create their own local ".env" file.
-
-## Usage
-
-Run the Python script:
-
-```py
-python app/my_script.py
-
-# alternative module-style invocation (only required if importing from one file to another):
-python -m app.my_script
-```
-
-> NOTE: if you see an error like "ModuleNotFoundError: No module named '...'", it's because the given package isn't installed, so run the `pip` command above to ensure that package has been installed into the virtual environment.
 
